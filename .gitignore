@@ -1,0 +1,13 @@
+node_modules
+dist
+.vite
+*.local
+preview.log
+preview.err.log
+.netlify/state.json
+.env
+server/.env
+server/.env.*
+.scratch_pg/
+
+/src/generated/prisma

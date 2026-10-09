@@ -1,0 +1,15 @@
+server\src\server.js=True
+server\src\app.js=True
+server\src\auth.js=True
+server\src\routes\auth.routes.js=True
+server\src\routes\foods.routes.js=True
+server\src\routes\invoices.routes.js=True
+server\migrations\001_init.sql=True
+server\migrations\002_ensure_columns.sql=True
+src\pages\Login.jsx=True
+src\pages\AdminDashboard.jsx=True
+src\pages\ClientDashboard.jsx=True
+src\context\AuthContext.jsx=True
+src\api.js=True
+scratch_exists=False
+server_env_ignored=True

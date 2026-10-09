@@ -1,0 +1,29 @@
+# Netlify configuration — Shah Jee Dhaba (Vite + React SPA)
+# Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# --- SPA fallback -----------------------------------------------------------
+# The app uses client-side routing (react-router-dom BrowserRouter).
+# Without this rule, opening https://<site>.netlify.app/menu or /contact
+# directly (or refreshing the page) returns "Page not found" 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# --- Long-term caching for the hashed Vite assets ---------------------------
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
